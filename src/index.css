@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --color-brand-bg: #FFFFFF;
+  --color-brand-sub: #F9F8FC;
+  --color-brand-primary: #5B2CA0;
+  --color-brand-secondary: #D084E4;
+  --color-brand-soft: #E9DDF8;
+  --color-brand-accent: #D91E2A;
+  --color-brand-ink: #1A1A1A;
+  --color-brand-subtext: #4A3B69;
+  --color-brand-depth: #2A154A;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+  }
+}
+
+.flashcard-scene {
+  perspective: 1400px;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.56s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.flashcard-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flashcard-face-back {
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flashcard-inner {
+    transition: transform 0.15s ease-out;
+  }
+}

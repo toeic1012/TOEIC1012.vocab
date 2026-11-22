@@ -1,0 +1,6 @@
+{
+  "name": "TOEIC Reading Flashcards",
+  "description": "Ứng dụng học từ vựng TOEIC Reading dạng Interactive Audio Flashcards hỗ trợ nhập file Excel, phát âm chuẩn Mỹ và xuất file HTML đơn.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

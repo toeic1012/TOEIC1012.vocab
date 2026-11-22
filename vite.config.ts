@@ -6,6 +6,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base:'/TOEIC1012.vocab/',
     plugins: [
       react(),
       tailwindcss(),
